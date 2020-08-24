@@ -1,10 +1,18 @@
-article {
-    width: 960px;
+* {
+    font-family: Georgia, Verdana, sans-serif;
+    line-height: 1.5em;
+    background-color: lightgray;
+    color: #323232;
+}
+
+article, #cover {
+    width: 65em;
     margin: auto;
 }
 
 h1 {
     font-size: 3em;
+    margin-bottom: 0px;
 }
 
 h2 {
@@ -12,7 +20,7 @@ h2 {
 }
 
 p, blockquote, ul, ol {
-    font-size: 1em;
+    font-size: 20px;
     line-height: 1.5em;
 }
 
@@ -24,7 +32,12 @@ p, blockquote, ul, ol {
 }
 
 #facts > ul {
-    list-style-image: url('cup-icon.svg');
+    list-style-image: url('../img/cup-icon.svg');
     line-height: 1.5em;
     padding-left: 1.5em;
+}
+
+
+#intro {
+    border-top: 2px solid black;
 }

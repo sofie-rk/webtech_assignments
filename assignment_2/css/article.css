@@ -12,7 +12,7 @@ article, #cover {
 
 h1 {
     font-size: 3em;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -37,7 +37,3 @@ p, blockquote, ul, ol {
     padding-left: 1.5em;
 }
 
-
-#intro {
-    border-top: 2px solid black;
-}

@@ -1,0 +1,19 @@
+Directory og mappe er det samme? (Er 10% av øvingen å lage to mapper?)
+
+Kan header og paragraph ha samme font? 
+Skal ikke spørsmålslisten (<li>) ha en spesifisert font?
+
+Skal ikke header ha fall back font?
+
+Riktig måte for img i css?
+Jeg fjernet størrelse-spesifikasjonene i about.html.
+
+Increase border width: style="border-width:8px"
+
+Har jeg tolket "horizontal line" riktig? (Border-top på intro)
+
+Width, skal være lik article body. article, #cover ok praksis?
+
+Font-size intervall? Eller velge én verdi.
+
+CSS-filer i <head> fremfor <body>

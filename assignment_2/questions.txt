@@ -1,10 +1,9 @@
-Directory og mappe er det samme? (Er 10% av øvingen å lage to mapper?)
+1) Inline style CSS override rules defined in style elements and external stylesheet because of "the last rule" and the hierarchy. Inline style has the higest prescedence, and will win over other style specifics.
 
-Kan header og paragraph ha samme font?
+2) Classes and IDs are ways of applying CSS rules to an element. You should use a class (.class) when several elements share the same style and ID (#id) for unique elements such as main title.
 
-Skal ikke header ha fall back font?
+3) RGBA means "red, green, blue, alpha". It express colors in terms of how much red, green and blue (integers between 0 and 255). Alpha express the opacity of the color (number between 0 and 1). It is possible with 256*256*256 = 16 777 216 different colors, and in addition the opacity can be changed for all of these colors.
 
-Riktig måte for img i css?
-Jeg fjernet størrelse-spesifikasjonene i about.html.
+4) We want to include CSS files inside the head element and not inside body because the head-element will be run before the body-element when the page is loading. If the CSS is in the head, the layout of the page is generated before the rest of the page which looks better. 
 
-Increase border width: style="border-width:8px"
+5) CSS selector: article > p {}, all the <p> inside <article> will get the CSS style, but not the <p> outside <article> (child selector, <p> elements that are children of <article>).

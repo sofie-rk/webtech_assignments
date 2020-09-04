@@ -1,0 +1,10 @@
+OPPGAVE 1
+
+Brukt left: 5px; bottom 5px; osv.
+Vurderer å bruke left:0; bottom: 0; margin:5px; Hva er best?
+
+Brukt position: relative; på stor boks og midt-boks.
+Brukt position: absolute; på alt annet.
+
+Generelt, burde jeg ha laget en "felles" .one, .two, . three{} for de med felles egenskaper?
+

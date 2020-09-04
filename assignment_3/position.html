@@ -10,6 +10,7 @@
       padding: 0;
       height: 100%;
     }
+
     /* Part 1 */
 
     .header{
@@ -36,6 +37,9 @@
       border-width: 2px;
       border-color: #FAA21B;
       border-style: solid;
+      left: 5px;
+      top: 5px;
+      position: absolute;
       
     }
 
@@ -46,6 +50,9 @@
       border-color: #FAA21B;
       border-style: solid;
       background-color: #fff;
+      left: 5px;
+      bottom: 5px;
+      position: absolute;
     }
 
     .three{
@@ -55,6 +62,13 @@
       border-color: #FAA21B;
       border-style: solid;
       background-color: #fff;
+      top: 25%;
+      right: -50px;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      
+     
     }
 
     .five{
@@ -62,6 +76,9 @@
       right: 10px;
       font-size: 35px;
       font-family: sans-serif;
+      text-align: end;
+      position: absolute;
+      
     }
 
     .four{
@@ -70,9 +87,34 @@
       border-width: 2px;
       border-color: #FAA21B;
       border-style: solid;
+      margin: auto;
+      position: relative;
     }
 
     /* Part 2 */
+
+    /* Unvisited link */
+    .five a:link {
+      color: blue;
+    }
+
+    /* Visited link */
+    .five a:visited {
+      color: magenta;
+    }
+
+    /* Mouse over link */
+    .five a:hover {
+      color: green;
+    }
+
+    /* Selected link */
+    .five a:active {
+      color: orange;
+    } 
+
+
+
 
   </style>
 </head>
@@ -89,7 +131,8 @@
         <div class="four"></div>
       </div>
       <div class="five">
-        CSS is awesome
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+        CSS is awesome </a>
       </div>
     </div>
 

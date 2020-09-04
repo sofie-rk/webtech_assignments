@@ -4,5 +4,23 @@ html, body{
   height: 100%;
 }
 
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+  
+}
+.footer, .push {
+  height: 50px
+  
+}
+
 /* Part 4 */
+ul {
+  list-style-type: square;
+  
+}
+
+li:last-child {
+  color: red;
+}
 

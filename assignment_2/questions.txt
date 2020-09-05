@@ -1,6 +1,6 @@
 1) Inline style CSS override rules defined in style elements and external stylesheet because of "the last rule" and the hierarchy. Inline style has the higest prescedence, and will win over other style specifics.
 
-2) Classes and IDs are ways of applying CSS rules to an element. You should use a class (.class) when several elements share the same style and ID (#id) for unique elements such as main title.
+2) Classes and IDs are ways of applying CSS rules to an element. You should use a class (.class) when several elements share the same style, and ID (#id) for unique elements such as main title.
 
 3) RGBA means "red, green, blue, alpha". It express colors in terms of how much red, green and blue (integers between 0 and 255). Alpha express the opacity of the color (number between 0 and 1). It is possible with 256*256*256 = 16 777 216 different colors, and in addition the opacity can be changed for all of these colors.
 

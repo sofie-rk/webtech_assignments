@@ -4,7 +4,10 @@ header {
 body {
     background-color: #EAE4E2;
 }
-p, li {
+/*Merk: oppgaveteksten sier: "Choose a font for your paragraphs"
+Jeg tolker det som at dette gjelder <p>. Listen (<li>) er ikke spesifisert.
+Ville jeg hatt samme font på <p> og <li> hadde jeg skrevet p, li {}*/
+p {
     font-family: Arial, Helvetica, sans-serif;
 }
 img {

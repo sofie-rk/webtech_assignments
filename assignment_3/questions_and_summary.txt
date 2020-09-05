@@ -8,3 +8,11 @@ Brukt position: absolute; på alt annet.
 
 Generelt, burde jeg ha laget en "felles" .one, .two, . three{} for de med felles egenskaper?
 
+
+
+OPPGAVE 3
+Mange riktige måter? Jeg likte en "push".
+
+
+SPØRSMÅL
+CSS2 vs CSS3. Pseudo-selector :nth-child(3)

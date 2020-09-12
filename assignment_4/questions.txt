@@ -1,0 +1,5 @@
+1) Mobile phones usually ignoere auto play on video elements because it is not supported by the mobile device. 
+
+2) If browsing on a device with 320x568 resolution (I am assuming pixels as nothing else is specified), the logo will be displayed because it is not between 768px and 1024px.
+
+3) One advantage of having a responsive design instead of single responsive website for mobile and desktop, is that you only need a single website which is easier to administer and maintain. Another advantage is that you only need one URL, which is easier for the user as well. Also, having only one webpage will lower the cost (developing etc).

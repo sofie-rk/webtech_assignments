@@ -1,0 +1,4 @@
+1) position: absolute means that the box positioned relative to its first positioned ancestor element, which means that the box is taken out of the "normal flow".
+position: fixed means that the box is positioned relative to the browser window. If the user scrools down, the elemnt will stay on the same place.
+
+2) In CSS3, if you want to access the third element within another element, you can use the pseudo-selector :nth-child(3).

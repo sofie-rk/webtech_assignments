@@ -20,7 +20,7 @@ ul {
   
 }
 
-li:last-child {
+.sublist li:last-child {
   color: red;
 }
 

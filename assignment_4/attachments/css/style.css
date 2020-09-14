@@ -28,14 +28,14 @@
     width: 100%;
   }
 
+  
   article {
-    /* width: 720px; */
-    /* margin: 20px 50px; */
+    /*Part 4: Responsive Design*/
+    
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
     text-align: left;
-    
     
   }
 
@@ -47,7 +47,6 @@
 
   /*Part 5: media queries*/
   /*Visitor with screen width less than 940px, the video should be replaced by an image*/
-
 
   #screen > img {
     width: 100%;

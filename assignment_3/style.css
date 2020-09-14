@@ -2,16 +2,28 @@ html, body{
   margin: 0;
   padding: 0;
   height: 100%;
+  min-height: 100%;
 }
 
+/*Part 3: Style the footer*/
+/*Comments: wrapper has position: relative, making it possible to have footer at position: absolute at the bottom of the wrapper.
+wrapper padding-bottom: 2.5em makes sure that content does not overlap the footer. However, this makes the footer stay "beneath" 
+the first sight of the page.*/
+
+/*This was a tricky problem, especially since the footer had to be at the bottom of the wrapper, and not beneath it.*/
+
+/*I decided to make share that content did not overlap with the footer instead of making sure that the footer is visible
+at the first sight of the page. I hope that makes sense and is ok.*/
 .wrapper {
-  min-height: 100%;
-  margin-bottom: -50px;
+  min-height: 100%;  
+  position: relative;
+  padding-bottom: 2.5em;
   
 }
-.footer, .push {
-  height: 50px
-  
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 2.5em;
 }
 
 /* Part 4 */

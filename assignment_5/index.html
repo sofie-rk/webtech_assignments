@@ -29,13 +29,16 @@
   </head>
   <body>
 
+  
+  
+
     <h1 id='title'></h1>
 
     <h2>Part 5</h2>
     <div class='buttons'>
-      <button>Display: none </button>
-      <button>Visibility: hidden</button>
-      <button>Reset</button>
+      <button id="none">Display: none </button>
+      <button id="hidden">Visibility: hidden</button>
+      <button id="reset">Reset</button>
     </div>
     <div class='box' id='magic'> 1 </div>
     <div class='box'> 2 </div>
@@ -43,6 +46,17 @@
     <h2>Part 6</h2>
     <ul id='tech'>
     </ul>
+
+    <script type="text/JavaScript" src="script.js"></script>
+  
+  <!-- The <script> tag can be placed in both the <head> and <body> 
+        The code will be rendered from the top to the bottom, and the 
+        order is important.
+        We need to reference an element after it has been 
+        rendered, or else the reference will fail.
+        I placed it at the bottom of the body so that all the HTML-tags it might
+        reference to is already rendered.
+  -->
 
   </body>
 </html>

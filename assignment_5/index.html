@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>IT2805 assignment 5: JavaScript introduction</title>
@@ -29,18 +29,19 @@
   </head>
   <body>
 
+    
   
-  
-
+    <!-- I get a warning from the HTML-validator that this heading is empty, but the JS makes the "title",
+    so I did not fix this warning -->
+    </h1>
     <h1 id='title'></h1>
 
     <h2>Part 5</h2>
     <div class='buttons'>
-      <!-- PART 4: I makee id-references to these buttons in js using getElementById()
-      I therefore added id-attributes to the buttons-->
-      <button id="none">Display: none </button>
-      <button id="hidden">Visibility: hidden</button>
-      <button id="reset">Reset</button>
+      <!-- PART 5: when clicked, the function in js is run-->
+      <button onclick="changeDisplay()">Display: none </button>
+      <button onclick="changeVisibility()">Visibility: hidden</button>
+      <button onclick="reset()">Reset</button>
     </div>
     <div class='box' id='magic'> 1 </div>
     <div class='box'> 2 </div>
@@ -49,14 +50,17 @@
     <ul id='tech'>
     </ul>
 
-    <script type="text/JavaScript" src="script.js"></script>
+    <!-- Note: the validator gave me a warning when I used type="text/javascript",
+    so I removed it -->
+    <!-- Since script.js and index.html are in the same folder, this is the relative path -->
+    <script src="script.js"></script>
   
   <!-- The <script> tag can be placed in both the <head> and <body> 
         The code will be rendered from the top to the bottom, and the 
         order is important.
         We need to reference an element after it has been 
         rendered, or else the reference will fail.
-        I placed it at the bottom of the body so that all the HTML-tags it might
+        I placed it at the bottom of the body so that all the HTML-tags it
         reference to is already rendered.
   -->
 

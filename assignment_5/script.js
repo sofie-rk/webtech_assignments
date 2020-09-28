@@ -1,6 +1,6 @@
 /* Part 2 */
 console.log('PART 2')
-// For-loop, prints integers from 1 to 20 in developer console
+// Prints integers from 1 to 20 in developer console
 for (let i = 1; i < 21; i++) {
     console.log(i)
 }
@@ -10,7 +10,6 @@ console.log('PART 3')
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
-// The assignment asks for comments, so here we go:)
 for (let i = 0; i < numbers.length; i++) {
     // Loop from i=0 up to the length of the array numbers.
     // Will use i to access elements in the array numbers: numbers[i]
@@ -40,13 +39,6 @@ title.innerText = "Hello JavaScript"
 // Creating a variable since this element is used in many functions later
 let magic = document.getElementById("magic")
 
-
-// Adds event handling
-// Example: document.getElementById("none") gets the button with id="none"
-// .addEventListener("click", changeDisplay) when button is clicked, and event is occuring running function changeDisplay
-document.getElementById("none").addEventListener("click", changeDisplay)
-document.getElementById("hidden").addEventListener("click", changeVisibility)
-document.getElementById("reset").addEventListener("click", reset)
 
 function changeDisplay () {
     // div with id=magic is removed from the document flow
@@ -83,10 +75,12 @@ const technologies = [
 ];
 
 for (let i = 0; i < technologies.length; i++) {
-    var node = document.createElement("LI")                 // create <li> node
-    var textnode = document.createTextNode(technologies[i]) // create text node
-    node.appendChild(textnode)                              // append the text to <li>
-    document.getElementById("tech").appendChild(node)       // append <li> to <ul> with id="tech"
+    // looping through all the elements in technologies
+    var li = document.createElement("LI")                   // create <li> node
+    var text = document.createTextNode(technologies[i])     // create text node with text from technologies-array
+    li.appendChild(text)                                    // append the text to <li>
+    document.getElementById("tech").appendChild(li)       // append <li> to <ul> with id="tech"
+    // Now, a new <li> is added to the <ul> (list)
 }
 
 

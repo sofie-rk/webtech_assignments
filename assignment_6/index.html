@@ -4,10 +4,109 @@
         <title>Tax form</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
+        
         <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
+            <div class="container">
+                <h1>User information</h1>
+            <p>
+                <label for="real_name">
+                    Real name:
+                    <input type="text" id="real_name" name="real_name" autofocus required>
+                </label>
+            </p>
+            
+            <p>
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label for="male">Male</label>
+                    <input type="radio" id="gender" name="gender" value="male">
+                    <label for="female">Female</label>
+                    <input type="radio" id="gender" name="gender" value="female">
+                </fieldset>
+            </p>
 
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthday" min="01-01-1988" required>
+            </p>
+            
+            <p>
+                <label for="heroname">Hero name:</label>
+                <input type="text" id="heroname" name="heroname" required>
+            </p>
+            
+
+            <p>
+                <fieldset>
+                    <legend>Do you wear spandex?</legend>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes" name="spandex" value="yes">
+                    <label for="no">No</label>
+                    <input type="radio" id="no" name="spandex" value="no">
+                </fieldset>
+            </p>
+        
+            <p>
+                <label for="strength">Strength:</label>
+                <input type="number" id="strength" name="strength" min="0" max="10" required>
+            </p>
+
+            <p>
+                <label for="speed">Speed:</label>
+                <input type="number" id="speed" name="speed" min="0" max="10" required>
+            </p>
+
+            <p>
+                <label for="intelligence">Intelligence:</label>
+                <input type="number" id="intelligence" name="intelligence" min="0" max="10" required>
+            </p>
+
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+
+            <p>
+                <label for="income">Income:</label>
+                <input type="number" id="income" name="income" min="0" onchange=getTax()>
+            </p>
+
+            <p>
+                <label for="wealth">Wealth:</label>
+                <input type="number" id="wealth" name="wealth" min="0" onchange=getTax()>
+            </p>
+
+            <p>
+                <label for="tax">Tax:</label>
+                <input type="number" id="tax" name="tax" disabled>
+            </p>
+            </div>        
         </form>
+
+        <script>
+            function getTax() {
+                var income = document.getElementById("income").value
+                var wealth = document.getElementById("wealth").value
+                document.getElementById("tax").value = (0.35*income) + (0.25*wealth)
+            }
+        </script>
     </body>
 </html>
+
+
+<!-- 
+    type attribute: text, radio, checkbox, submit, button
+
+    name attribute: used when sending data with GET and POST.
+    Data sent to the server will be labeled with that name.
+-->
+
+

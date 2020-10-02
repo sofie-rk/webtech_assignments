@@ -1,0 +1,27 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    background-color: #FAF2EF;
+}
+
+/* Adding padding to container */
+.container {
+    padding: 10px;
+}
+
+/* Input fields full-width*/
+input[type=text], input[type=email], input[type=number], input[type=date]{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+input:focus {
+    background-color: lightgray;
+}
+
+input:disabled {
+    background-color: lightsalmon;
+}

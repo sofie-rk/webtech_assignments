@@ -1,0 +1,14 @@
+1) In JavaScript 0.1 + 0.2 == 0.3 will give false. This is because of the way JavaScript uses decimals and floating point math.
+The decimal will be stored as a binary. Binaries are represented in base2, as 0's and 1's. We are used to base10.
+Floats with "repeating decimals" cannot be stored "cleanly" in binary. 0.1 can be presented with 1 digit decimal in base10, but not in base2.
+This results in the floating point error.
+
+2) The "method"-attribute in a form element specifies how to send the data with (GET or POST).
+
+3) With GET, the form-data is sent as URL variables. The form data is appended into the URL in name/value pairs, which is why the form fields appear in the URL.
+
+4) You should have a validator for the user input in the backend as well in addition to the validator in the front end (HTML5 and/or JavaScript). 
+The frontend is available for everyone who can HTML, CSS and JS, and users can therefor easily bypass and send bad data.
+The frontend (client side) can be viewed as an "inital, fast check" of the form data.
+
+5) You should use "textarea" over "input" when the user wants to type in more than one line of text. Textarea allows line break in the typed text.

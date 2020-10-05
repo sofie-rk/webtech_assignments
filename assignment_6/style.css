@@ -4,13 +4,14 @@
     background-color: #FAF2EF;
 }
 
-/* Adding padding to container */
+/* Adding padding to container to make input fiels a bit spaced */
 .container {
     padding: 10px;
 }
 
 /* Input fields full-width*/
-input[type=text], input[type=email], input[type=number], input[type=date]{
+input[type=text], input[type=email], input[type=date], input[type=range], input[type=number]{
+    /* Add some styling to the input fields */
     width: 100%;
     padding: 10px;
     margin: 5px 0 10px 0;
@@ -18,10 +19,21 @@ input[type=text], input[type=email], input[type=number], input[type=date]{
     border: 1px solid black;
 }
 
+input[type=submit] {
+    /* I want the submit button to be yellow and fill half of the browser window in the width */
+    width: 50%;
+    position: relative;
+    left: 25%;
+    height: 40px;
+    background-color: yellow;
+}
+
+
 input:focus {
-    background-color: lightgray;
+    /* When in the input-field, the input field changes color */
+    background-color: lightblue;
 }
 
 input:disabled {
-    background-color: lightsalmon;
+    background-color: lightpink;
 }

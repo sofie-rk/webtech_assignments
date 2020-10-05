@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Tax form</title>
         <meta charset="utf-8" />
@@ -10,24 +10,34 @@
     <body>
         
         <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
+            
+    
             <div class="container">
                 <h1>User information</h1>
             <p>
-                <label for="real_name">
-                    Real name:
-                    <input type="text" id="real_name" name="real_name" autofocus required>
-                </label>
+                <!-- for="..." tells which input with id="..." this label is for.-->
+                <label for="real_name">Real name:</label>
+                <!-- Must specify type of the input (here: text). Id is used to link to the <label>. 
+                    Name is used when sending data with GET and POST. Data sent to the server has that name. -->
+                <!-- Autofocus because this is the first input field, and it is natural that the user 
+                    is "standing" there when opening the browser window  -->
+                <!-- Required is used on all input tags, as all input fields is required to be
+                    filled put before submitting -->
+                <input type="text" id="real_name" name="real_name" autofocus required>
             </p>
             
-            <p>
-                <fieldset>
-                    <legend>Gender</legend>
-                    <label for="male">Male</label>
-                    <input type="radio" id="gender" name="gender" value="male">
-                    <label for="female">Female</label>
-                    <input type="radio" id="gender" name="gender" value="female">
-                </fieldset>
-            </p>
+           
+            <!-- Fieldset is used to group radio-buttons -->
+            <!-- When all of the radio-buttons have the same name, adding "required" to one input tag
+                applies required to all tags with that name.-->
+            <fieldset>
+                <legend>Gender</legend>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+            </fieldset>
+        
 
             <p>
                 <label for="email">Email:</label>
@@ -36,7 +46,7 @@
 
             <p>
                 <label for="birthdate">Birthdate:</label>
-                <input type="date" id="birthdate" name="birthday" min="01-01-1988" required>
+                <input type="date" id="birthdate" name="birthday" max="1988-01-01" required>
             </p>
             
             <p>
@@ -45,45 +55,54 @@
             </p>
             
 
-            <p>
-                <fieldset>
-                    <legend>Do you wear spandex?</legend>
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="yes" name="spandex" value="yes">
-                    <label for="no">No</label>
-                    <input type="radio" id="no" name="spandex" value="no">
-                </fieldset>
-            </p>
+            
+            <fieldset>
+                <legend>Do you wear spandex?</legend>
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" name="spandex" value="yes" required>
+                <label for="no">No</label>
+                <input type="radio" id="no" name="spandex" value="no">
+            </fieldset>
         
+        
+            <!-- min=0, max=10 specifies min and max value allowed, and step=1 makes sure it is an integer  -->
+            <!-- Note that required cannot be used for slider (but they are defualt set, so they will be "filled out" initially) -->
             <p>
                 <label for="strength">Strength:</label>
-                <input type="number" id="strength" name="strength" min="0" max="10" required>
+                <input type="range" id="strength" name="strength" min="0" max="10" step="1">
             </p>
 
             <p>
                 <label for="speed">Speed:</label>
-                <input type="number" id="speed" name="speed" min="0" max="10" required>
+                <input type="range" id="speed" name="speed" min="0" max="10" step="1">
             </p>
 
             <p>
                 <label for="intelligence">Intelligence:</label>
-                <input type="number" id="intelligence" name="intelligence" min="0" max="10" required>
+                <input type="range" id="intelligence" name="intelligence" min="0" max="10" step="1">
             </p>
 
+            <!-- Submit-button -->
             <p>
                 <input type="submit" value="Submit">
             </p>
 
+
+            <!-- PART 4 -->
+
+            <!-- When the user first enters something here (onkeypress), the JavaScript function getTax() is triggered -->
             <p>
                 <label for="income">Income:</label>
-                <input type="number" id="income" name="income" min="0" onchange=getTax()>
+                <input type="number" id="income" name="income" min="0" onkeypress=getTax()>
             </p>
 
             <p>
                 <label for="wealth">Wealth:</label>
-                <input type="number" id="wealth" name="wealth" min="0" onchange=getTax()>
+                <input type="number" id="wealth" name="wealth" min="0" onkeypress=getTax()>
             </p>
 
+            <!-- Disabled makes sure the user cant write anything in this field -->
+            <!-- The value of this field is updated by the function getTax() -->
             <p>
                 <label for="tax">Tax:</label>
                 <input type="number" id="tax" name="tax" disabled>
@@ -93,8 +112,11 @@
 
         <script>
             function getTax() {
+                // Get values of income and wealth from the form, using id
                 var income = document.getElementById("income").value
                 var wealth = document.getElementById("wealth").value
+
+                // Update the value of element with id="tax"
                 document.getElementById("tax").value = (0.35*income) + (0.25*wealth)
             }
         </script>
@@ -102,11 +124,5 @@
 </html>
 
 
-<!-- 
-    type attribute: text, radio, checkbox, submit, button
-
-    name attribute: used when sending data with GET and POST.
-    Data sent to the server will be labeled with that name.
--->
 
 

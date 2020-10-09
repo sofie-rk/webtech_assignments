@@ -1,0 +1,29 @@
+* {
+    background-color: rgb(238, 215, 195);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+input[type=text], input[type=submit] {
+    height: 40px;
+    font-size: 15pt;
+}
+
+input[type=submit] {
+    width: 100px;
+}
+
+
+input[type=text], input[type="submit"]:hover {
+    background-color: whitesmoke;
+}
+
+ul {
+    /* Remove bullets in list */
+    list-style-type: none;
+
+    /* Other styling */
+    position: relative;
+    right: 25px;
+}

@@ -13,12 +13,16 @@ var tasks = []
 var numberOfTasks = 0;
 var numberOfTasksDone = 0;
 
+// Add eventlistner to button
+addBtn.addEventListener('click', function(event) {addTask(event)})
 
 
 // When user writes a task in input field and clicks the "add" button, the task should
 // be added to the empty list with a checkbox in front of it
 
-function addTask() {
+function addTask(event) {
+
+    event.preventDefault()
 
     // Increase the total number of tasks and use innerHTML to update total number of tasks
     numberOfTasks++

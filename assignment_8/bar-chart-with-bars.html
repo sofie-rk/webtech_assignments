@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax forms: Bar chart with lines</title>
+    <meta charset="UTF-8">
+    <script src="taxForms.js"></script>
+  </head>
+  <body>
+
+    <canvas id="chart" width="700" height="550"></canvas>
+
+    <script>
+      const canvas = document.getElementById('chart');
+      const context = canvas.getContext('2d');
+
+      /* Draw a line from (fromX, fromY) to (toX, toY) */
+      function drawLine(fromX, fromY, toX, toY) {
+        context.beginPath();
+        context.moveTo(toX, toY);
+        context.lineTo(fromX, fromY);
+        context.stroke();
+      }
+
+      /* Draw a text (string) on (x, y) */
+      function drawText(text, x, y) {
+        context.fillStyle = 'black';
+        context.fillText(text, x, y);
+      }
+
+      /* Draw a text and with a line to its right */
+      function drawLineWithText(text, fromX, fromY, toX, toY) {
+        // I decided to change the y-coord from fromY+10 to fromY+5
+        drawText(text, fromX - 50, fromY + 5);
+        drawLine(fromX, fromY, toX, toY);
+      }
+
+      /* Insert your code here. */
+
+      /* Part 2 */
+
+      // Defining some variables to make drawing easier and more consistent
+      let xBase = 70;
+      let yBase = 50;
+      let ySpace = 40;
+      let xLength = 500;
+
+      for (let i = 0; i < 10; i++) {
+        drawLineWithText(1000000 - i*100000, xBase, yBase + ySpace*i, xBase + xLength, yBase + ySpace*i)
+      }
+
+      /* Part 3 */
+
+      function drawRectangle(color, xCoord, yCoord, width, height) {
+        context.fillStyle = color;
+        context.fillRect(xCoord, yCoord, width, height);
+      }
+
+      let rectangleWidth = 50;
+      let rectangleHeight = ySpace/3;
+
+      drawRectangle('red', xBase + xLength + 10, yBase, rectangleWidth, rectangleHeight)
+      drawText('Income', xBase + xLength + rectangleWidth + 20 , yBase + 2*rectangleHeight/3)
+      drawRectangle('blue', xBase + xLength + 10, yBase + 2*rectangleHeight, rectangleWidth, rectangleHeight)
+      drawText('Wealth', xBase + xLength + rectangleWidth + 20, yBase + 2*rectangleHeight + 2*rectangleHeight/3)
+
+      /* Part 4 */
+
+      // Defining "origo" 
+      let xOrigo = xBase;
+      let yOrigo = yBase + 10*ySpace;
+
+      // Spacing between income and wealth graph for each super hero
+      let incomeAndWealthSpacing = 10;
+
+      // Width of each bar, will also be the spacing between graphs of each super hero
+      let barWidth = 45;
+
+      // I want to draw the x-axis as well, I think that looks better:)
+      drawLine(xOrigo, yOrigo, xOrigo + xLength, yOrigo)
+
+      for (let i = 0; i < taxForms.length ; i++) {
+          // Iterate through the objects in taxForms array
+
+          // Note: 100 000 is ySpace (40) px apart. Therefore when drawing, the y-value coordinate need to be scaled
+          // Also, the origo is in the upper left corner so the y-axis direction is downwards
+
+          // When creating a rectangle, the upper left corner coordinates, width and height are specified
+
+          // Text of the super hero name is placed under the x-axis, because why not?:)
+          drawText(taxForms[i].realName, xOrigo + barWidth*4*i + incomeAndWealthSpacing + barWidth/2, yOrigo + 10)
+
+          // Rectangle displaying income
+          drawRectangle('red', xOrigo + barWidth*4*i + incomeAndWealthSpacing, yBase + (1000000 - taxForms[i].income)*ySpace/100000, barWidth, taxForms[i].income*ySpace/100000)
+
+          // Rectangle displaying wealth
+          drawRectangle('blue', xOrigo + barWidth*(4*i+1) + 2*incomeAndWealthSpacing, yBase + (1000000 - taxForms[i].wealth)*40/100000, barWidth, taxForms[i].wealth*ySpace/100000)
+      }
+    </script>
+  </body>
+</html>

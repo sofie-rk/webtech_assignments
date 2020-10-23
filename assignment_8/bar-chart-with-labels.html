@@ -29,16 +29,20 @@
 
       /* Draw a text and with a line to its right */
       function drawLineWithText(text, fromX, fromY, toX, toY) {
-        drawText(text, fromX - 50, fromY + 10);
+        // I decided to change the y-coord from fromY+10 to fromY+5
+        drawText(text, fromX - 50, fromY + 5);
         drawLine(fromX, fromY, toX, toY);
       }
 
       /* Insert your code here. */
 
+      /* Part 2 */
+
+      // Defining some variables to make drawing easier and more consistent
       let xBase = 70;
       let yBase = 50;
       let ySpace = 50;
-      let xLength = 400;
+      let xLength = 500;
 
       for (let i = 0; i < 10; i++) {
         drawLineWithText(1000000 - i*100000, xBase, yBase + ySpace*i, xBase + xLength, yBase + ySpace*i)
@@ -46,15 +50,18 @@
 
       /* Part 3 */
 
-      function drawRectangles(color, xCoord, yCoord, width, height) {
+      function drawRectangle(color, xCoord, yCoord, width, height) {
         context.fillStyle = color;
         context.fillRect(xCoord, yCoord, width, height);
       }
 
-      let rectangleWidth = 150;
+      let rectangleWidth = 50;
       let rectangleHeight = ySpace/3;
 
-      drawRectangles('red', xBase + xLength + 10, yBase, rectangleWidth, rectangleHeight)
+      drawRectangle('red', xBase + xLength + 10, yBase, rectangleWidth, rectangleHeight)
+      drawText('Income', xBase + xLength + rectangleWidth + 20 , yBase + 2*rectangleHeight/3)
+      drawRectangle('blue', xBase + xLength + 10, yBase + 2*rectangleHeight, rectangleWidth, rectangleHeight)
+      drawText('Wealth', xBase + xLength + rectangleWidth + 20, yBase + 2*rectangleHeight + 2*rectangleHeight/3)
     </script>
   </body>
 </html>

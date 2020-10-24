@@ -1,6 +1,6 @@
 1) In order to have three-dimensional canvas type, you use "webgl" for browsers that implemenys WebGL version 1, and "webcl2 for browsers that implements WebGL version 2. 
 
-2) To create a circle using Canvas, you can use the arc(x, y, radius, startAngle, endAngle, anticlockwise) function. The arc will be centered at (x,y) with radius r, starting at startAngle and will end at endAngle. The anticlockwise can be set to true or false, and will be of importance when drawing a half circle (or similat, not full circle).
+2) To create a circle using Canvas, you can use the arc(x, y, radius, startAngle, endAngle, anticlockwise) function. The arc will be centered at (x,y) with radius r, starting at startAngle and will end at endAngle. The anticlockwise can be set to true or false, and will be of importance when drawing a half circle (or similar, not full circle).
 Example blue, full circle:
 context.beginPath()
 context.arc(100, 100, 40, 0, 2*Math.PI, true)

@@ -75,7 +75,7 @@
       // Width of each bar, will also be the spacing between graphs of each super hero
       let barWidth = 45;
 
-      // I want to draw the x-axis as well, I think that looks better:)
+      // I want to draw the x-axis as well, I think that looks better
       drawLine(xOrigo, yOrigo, xOrigo + xLength, yOrigo)
 
       for (let i = 0; i < taxForms.length ; i++) {
@@ -86,7 +86,7 @@
 
           // When creating a rectangle, the upper left corner coordinates, width and height are specified
 
-          // Text of the super hero name is placed under the x-axis, because why not?:)
+          // I decided to show the name of the super hero below the bars, because why not?:)
           drawText(taxForms[i].realName, xOrigo + barWidth*4*i + incomeAndWealthSpacing + barWidth/2, yOrigo + 10)
 
           // Rectangle displaying income
